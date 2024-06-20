@@ -6,7 +6,7 @@
 /*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 10:32:08 by anastruc          #+#    #+#             */
-/*   Updated: 2024/04/22 16:41:11 by anastruc         ###   ########.fr       */
+/*   Updated: 2024/05/06 17:32:58 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,29 +24,6 @@ static char	*ft_free(char **dest)
 	}
 	free(dest);
 	return (NULL);
-}
-
-static int	ft_countword(const char *s, char c)
-{
-	int	trigger;
-	int	i;
-	int	count;
-
-	trigger = 1;
-	i = 0;
-	count = 0;
-	while (s[i] != '\0')
-	{
-		if (trigger == 1 && s[i] != c)
-		{
-			count++;
-			trigger = 0;
-		}
-		if (s[i] == c)
-			trigger = 1;
-		i++;
-	}
-	return (count);
 }
 
 static char	*ft_fulfilltab(const char *s, int start, int end, char **dest)
